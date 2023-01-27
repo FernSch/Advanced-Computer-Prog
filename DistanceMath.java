@@ -21,7 +21,7 @@ public class DistanceMath
 		
 		
 		//getting input of x and y coordinates for both points from a single string
-		System.out.println("Enter both points with by a space (e.g 1,1 2,2): ");
+		System.out.println("Enter both points seperated by a space (e.g 1,1 2,2): ");
 		String points = scan.nextLine();	
 		
 		
