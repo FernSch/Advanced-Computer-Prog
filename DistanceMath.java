@@ -1,5 +1,5 @@
 //this code is soooo bad T_T
-
+// I had a worse code that took each part of each point as an integer but this is less cringe and full of scanner objects
 
 import java.text.DecimalFormat;
 import java.util.Scanner;
