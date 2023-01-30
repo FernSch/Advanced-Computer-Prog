@@ -1,8 +1,10 @@
 import java.util.Scanner;
 
+//I made a better one that took the points as one input (eg. "1,1 2,2") that took less code and such but the teacher requested it be as int
+//because he runs the programs in large batches for grading
+
 /* 
  1/27
- James Schoenberg
  Time and Reverse Time
  Convert hours, minutes, seconds into seconds
  and convert seconds into hours, minutes seconds
