@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
-//I made a better one that took the points as one input (eg. "1,1 2,2") that took less code and such but the teacher requested it be as int
-//because he runs the programs in large batches for grading
+//this is so bad LMFAO
 
 /* 
  1/27
@@ -14,7 +13,7 @@ public class TimeAndReverseTime
 {
 	public static void main(String[] args) 
 	{
-		
+		//i think i have depression
 		Scanner scan = new Scanner (System.in);
 		System.out.println("Enter time in seconds to convert: ");
 		
