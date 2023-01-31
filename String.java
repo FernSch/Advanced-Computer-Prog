@@ -1,3 +1,6 @@
+//this program was assigned as a way to show that you know how to use all the string operations that are going to be used in the class. there are much more
+//in the java 8 api but these are the only ones we will use
+
 import java.util.Random;
 
 /*
