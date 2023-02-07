@@ -16,12 +16,39 @@ public class myHouse extends Application
     //--------------------------------------------------------------------
     public void start(Stage primaryStage)
     {
+    	//add sky and grass
+    	Rectangle sky = new Rectangle(0,0, 1366, 700);
+    	sky.setFill(Color.LIGHTSKYBLUE);
+    	Rectangle grass = new Rectangle(0, 700, 1366, 68);
+    	grass.setFill(Color.LAWNGREEN);
+    	grass.setStroke(Color.LIGHTGREEN);
+    	grass.setStrokeWidth(2);
+    	
         //main part of house
     	Rectangle base = new Rectangle(400, 400, 700, 700);
     	base.setFill(Color.GAINSBORO);
     	base.setStroke(Color.BLACK);
     	base.setStrokeWidth(2);
+    	Rectangle chimeny = new Rectangle(900, 100, 100, 200);
+    	chimeny.setFill(Color.GAINSBORO);
+    	chimeny.setStroke(Color.BLACK);
+    	chimeny.setStrokeWidth(2);
         
+    	
+    	//smoke for chimeny
+    	Ellipse firstSmoke = new Ellipse(950, 100, 50,50);
+    	firstSmoke.setFill(Color.SLATEGREY);
+    	Ellipse secondSmoke = new Ellipse(975, 50, 50,50);
+    	secondSmoke.setFill(Color.SLATEGREY);
+    	Ellipse thirdSmoke = new Ellipse(1000, 0, 50,50);
+    	thirdSmoke.setFill(Color.SLATEGREY);
+    	
+    	//add a fun little sun
+    	Ellipse sun = new Ellipse(100,100, 75,75);
+    	sun.setFill(Color.YELLOW);
+    	sun.setStroke(Color.LIGHTYELLOW);
+    	sun.setStrokeWidth(2);
+    	
     	
     	//roof
     	Polygon roof = new Polygon();
@@ -36,7 +63,7 @@ public class myHouse extends Application
     	
     	//first window
         Rectangle windowOne = new Rectangle(450 ,500, 200, 200);
-        windowOne.setFill(Color.YELLOW);
+        windowOne.setFill(Color.GHOSTWHITE);
         windowOne.setStroke(Color.BLACK);
         windowOne.setStrokeWidth(2);
         //split for window
@@ -45,7 +72,7 @@ public class myHouse extends Application
         
         //second window
         Rectangle windowTwo = new Rectangle(850 ,500, 200, 200);
-        windowTwo.setFill(Color.YELLOW);
+        windowTwo.setFill(Color.GHOSTWHITE);
         windowTwo.setStroke(Color.BLACK);
         windowTwo.setStrokeWidth(2);
         //split for window
@@ -61,9 +88,10 @@ public class myHouse extends Application
         //tree leaves
         Ellipse leaves = new Ellipse(125, 350, 100, 200);
         leaves.setFill(Color.FORESTGREEN);
+        leaves.setStroke(Color.GREEN);
+        leaves.setStrokeWidth(2);
         
         
-        //750x
         //door
         Rectangle door = new Rectangle(675, 500, 150, 250);
         door.setFill(Color.SADDLEBROWN);
@@ -74,18 +102,21 @@ public class myHouse extends Application
         doorInlay.setStroke(Color.BLACK);
         doorInlay.setStrokeWidth(3);
         
-    	Group root = new Group(base, roof, windowOne, windowSplitOne, windowSplitTwo, 
-    			windowTwo, windowSplitOne_,
-    			windowSplitTwo_, trunk,
-    			leaves, door, knob, doorInlay
-    			
-
-    			
-    			);
+        Group windows = new Group
+        (
+        windowOne, windowSplitOne, windowSplitTwo, 
+        windowTwo, windowSplitOne_, windowSplitTwo_
+        );
+        Group smoke = new Group(firstSmoke, secondSmoke, thirdSmoke);
+        Group fullDoor = new Group(door, knob, doorInlay);
+        Group background = new Group(sky, grass, sun);
+        Group house = new Group(base, smoke, chimeny, roof);
+        
+    	Group root = new Group(background, house, trunk, leaves, fullDoor, windows);
     	Scene scene = new Scene(root, 1366, 768);
     
     	
-        primaryStage.setTitle("I have depression");
+        primaryStage.setTitle("James Schoenberg");
         primaryStage.setScene(scene);
         primaryStage.show();
     }
