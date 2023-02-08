@@ -91,6 +91,12 @@ public class myHouse extends Application
         leaves.setStroke(Color.GREEN);
         leaves.setStrokeWidth(2);
         
+        /* examlpe of an arc
+        Arc arc = new Arc (200, 200, 100,100, 90, 50);
+        arc.setStroke(Color.BLACK);
+        arc.setStrokeWidth(2);
+        arc.setFill(null);
+        */
         
         //door
         Rectangle door = new Rectangle(675, 500, 150, 250);
@@ -100,13 +106,14 @@ public class myHouse extends Application
         Rectangle doorInlay = new Rectangle(700, 510, 100, 100);
         doorInlay.setFill(Color.SADDLEBROWN);
         doorInlay.setStroke(Color.BLACK);
-        doorInlay.setStrokeWidth(3);
+        doorInlay.setStrokeWidth(2);
         
         Group windows = new Group
         (
         windowOne, windowSplitOne, windowSplitTwo, 
         windowTwo, windowSplitOne_, windowSplitTwo_
         );
+        
         Group smoke = new Group(firstSmoke, secondSmoke, thirdSmoke);
         Group fullDoor = new Group(door, knob, doorInlay);
         Group background = new Group(sky, grass, sun);
