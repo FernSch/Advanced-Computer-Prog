@@ -44,10 +44,9 @@ public class Coin
    {
       String faceName;
       if (face == HEADS)
-         faceName = "Heads";
-      else
-         faceName = "Tails";
-
-      return faceName;
+      {
+         return "Heads";
+      }
+      return "Tails";
    }
 }
